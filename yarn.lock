@@ -1943,6 +1943,11 @@ diff@^4.0.1:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
+dijkstra-calculator@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/dijkstra-calculator/-/dijkstra-calculator-1.0.8.tgz#5a570c402ef2a61b3e38cbfba309a69bd4d0d201"
+  integrity sha512-Szu3sB985R4bWsWK11Ce6phG1m6iNA64/Ce6jS8rn1RXGCiV8D9qfXCWpxWSU3VcNo7m0up7vzXrHUz8LEy/pg==
+
 dir-glob@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-3.0.1.tgz#56dbf73d992a4a93ba1584f4534063fd2e41717f"
@@ -3615,11 +3620,6 @@ mkdirp@^0.5.4:
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
   dependencies:
     minimist "^1.2.6"
-
-modern-dijkstra@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/modern-dijkstra/-/modern-dijkstra-1.1.2.tgz#c28213e336bbc3da13f3d8892ed0953182dcc613"
-  integrity sha512-7ShGaR4Gb/0Ulyj8U6yvRwNlU41SE9x4w1zuX1+u3A957j6jpn9ddplPtta/Zr+72f3eIUppP1q7Uh/2Hf6h7Q==
 
 ms@2.0.0:
   version "2.0.0"
