@@ -3616,6 +3616,11 @@ mkdirp@^0.5.4:
   dependencies:
     minimist "^1.2.6"
 
+modern-dijkstra@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/modern-dijkstra/-/modern-dijkstra-1.1.2.tgz#c28213e336bbc3da13f3d8892ed0953182dcc613"
+  integrity sha512-7ShGaR4Gb/0Ulyj8U6yvRwNlU41SE9x4w1zuX1+u3A957j6jpn9ddplPtta/Zr+72f3eIUppP1q7Uh/2Hf6h7Q==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
