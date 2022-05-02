@@ -35,28 +35,12 @@ export class AppService {
             gameConfig.board[rowIndex][colIndex - 1],
           );
         }
-        if (colIndex < boardSize - 1) {
-          const rightVertex = this.formatStringCell(colIndex + 1, rowIndex);
-          graph.addEdge(
-            currentVertex,
-            rightVertex,
-            gameConfig.board[rowIndex][colIndex + 1],
-          );
-        }
         if (rowIndex > 0) {
           const overVertex = this.formatStringCell(colIndex, rowIndex - 1);
           graph.addEdge(
             currentVertex,
             overVertex,
             gameConfig.board[rowIndex - 1][colIndex],
-          );
-        }
-        if (rowIndex < boardSize - 1) {
-          const belowVertex = this.formatStringCell(colIndex, rowIndex + 1);
-          graph.addEdge(
-            currentVertex,
-            belowVertex,
-            gameConfig.board[rowIndex + 1][colIndex],
           );
         }
       }
