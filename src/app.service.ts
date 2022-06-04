@@ -54,6 +54,8 @@ export class AppService {
           this.formatStringCell(gameConfig.stop[0], gameConfig.stop[1]),
         )
         .map((str) => this.formatNumberCell(str));
+      console.log(path);
+      
       return { path: path };
     }
     else if(gameConfig.algoId == 1){
@@ -67,9 +69,12 @@ export class AppService {
           // console.log(element["x"], element["y"]);
           path.push([element["y"], element["x"]])
         });
+        console.log(path);
+        
         return { path: path };
       }
     else{
+      console.log("err");
       return undefined;
     }
   }
