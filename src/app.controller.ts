@@ -12,7 +12,7 @@ export class AppController {
 
   @Post()
   postGameConfig(
-    @Body() gameConfig: { board: number[][]; start: number[]; stop: number[] },
+    @Body() gameConfig: { board: number[][]; start: number[]; stop: number[]; algoId: number; },
   ): { path: number[][] } {
     console.log(JSON.stringify(gameConfig, null, 2));
     return this.appService.getPathForGameConfig(gameConfig);

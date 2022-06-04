@@ -3317,6 +3317,11 @@ jest@^27.2.5:
     import-local "^3.0.2"
     jest-cli "^27.5.1"
 
+js-astar@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/js-astar/-/js-astar-0.0.2.tgz#d16ebf7b48689b676f85ef9e86d14b397f492c9e"
+  integrity sha512-/1d5eSeErK2XO2iDMM9TJWMOathwkS7atz30TkTTbBpGPT7pnCSx0h9ZFfamOAn7FIn4E7Xcf2ExR1dMrA0kFQ==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
