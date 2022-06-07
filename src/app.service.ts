@@ -24,12 +24,12 @@ export class AppService {
       let path = [];
       path.push(gameConfig.start);
       var graph = new AstarModule.Graph(gameConfig.board);
-      var start = graph.grid[gameConfig.start[0]][gameConfig.start[1]];
-      var end = graph.grid[gameConfig.stop[0]][gameConfig.stop[1]];
+      var start = graph.grid[gameConfig.start[1]][gameConfig.start[0]];
+      var end = graph.grid[gameConfig.stop[1]][gameConfig.stop[0]];
       var result = AstarModule.astar.search(graph, start, end);
       result.forEach((element) => {
         // console.log(element["x"], element["y"]);
-        path.push([element['x'], element['y']]);
+        path.push([element['y'], element['x']]);
       });
       console.log(path);
 
