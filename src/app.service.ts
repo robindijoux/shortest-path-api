@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DijkstraCalculator } from 'dijkstra-calculator';
 
-const AstarModule = require('../node_modules/js-astar')
+const AstarModule = require('../node_modules/js-astar');
 
 @Injectable()
 export class AppService {
@@ -20,7 +20,21 @@ export class AppService {
     algoId: number;
   }): { path: number[][] } {
     const boardSize = gameConfig.board.length;
-    if (gameConfig.algoId == 0){
+    if (gameConfig.algoId == 0) {
+      let path = [];
+      path.push(gameConfig.start);
+      var graph = new AstarModule.Graph(gameConfig.board);
+      var start = graph.grid[gameConfig.start[0]][gameConfig.start[1]];
+      var end = graph.grid[gameConfig.stop[0]][gameConfig.stop[1]];
+      var result = AstarModule.astar.search(graph, start, end);
+      result.forEach((element) => {
+        // console.log(element["x"], element["y"]);
+        path.push([element['x'], element['y']]);
+      });
+      console.log(path);
+
+      return { path: path };
+    } else if (gameConfig.algoId == 1) {
       const graph = new DijkstraCalculator();
       for (let rowIndex = 0; rowIndex < boardSize; rowIndex++) {
         for (let colIndex = 0; colIndex < boardSize; colIndex++) {
@@ -54,27 +68,10 @@ export class AppService {
           this.formatStringCell(gameConfig.stop[0], gameConfig.stop[1]),
         )
         .map((str) => this.formatNumberCell(str));
-      console.log();
-      
-      return { path: path.reverse() };
-    }
-    else if(gameConfig.algoId == 1){
-      let path = [];
-      path.push(gameConfig.start);
-      var graph = new AstarModule.Graph(gameConfig.board);
-        var start = graph.grid[gameConfig.start[0]][gameConfig.start[1]];
-        var end = graph.grid[gameConfig.stop[0]][gameConfig.stop[1]];
-        var result = AstarModule.astar.search(graph, start, end);
-        result.forEach(element => {
-          // console.log(element["x"], element["y"]);
-          path.push([element["y"], element["x"]])
-        });
-        console.log(path);
-        
-        return { path: path };
-      }
-    else{
-      console.log("err");
+
+      return { path: path };
+    } else {
+      console.log('err');
       return undefined;
     }
   }
